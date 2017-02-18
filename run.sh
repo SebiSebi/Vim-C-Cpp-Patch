@@ -41,8 +41,18 @@ cat src/ycm_C.config >> ~/.vimrc
 
 # Add build and run support.
 echo "Do you want to add build and run support? [Y/n]"
-read opt1
-if [ "$opt1" != "n" ];
+read opt
+if [ "$opt" != "n" ];
 then
 	cat src/build_and_run.config >> ~/.vimrc
+fi
+
+# Add colorscheme.
+echo "Do you want to add the colorscheme? [Y/n]"
+read opt
+if [ "$opt" != "n" ];
+then
+	mkdir ~/.vim/colors
+	cp src/my_vividchalk.vim ~/.vim/colors
+	echo "colorscheme my_vividchalk" >> ~/.vimrc	
 fi
