@@ -19,8 +19,23 @@ else
 	echo "Vim version ok."
 fi
 
+# Install You Complete Me with semantic support for C-family languages.
+apt-get install build-essential cmake
+apt-get install python-dev python3-dev
+apt-get install git
 
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+touch ~/.vimrc
+cat src/vundle.config > ~/.vimrc
+# vim +PluginInstall +qall
 
+# Add support for C-family languages.
+current_dir=$(pwd)
+cd ~/.vim/bundle/YouCompleteMe
+# ./install.py --clang-completer
 
-
+cd $current_dir
+touch ~/.vim/.ycm_extra_conf.py
+cat src/ycm_extra_conf.py > ~/.vim/.ycm_extra_conf.py
+cat src/ycm_C.config >> ~/.vimrc
 
