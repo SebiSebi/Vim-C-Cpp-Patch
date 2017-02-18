@@ -22,19 +22,28 @@ Installation
 **WARNING** This will override your current .vimrc configuration file in user home directory.
 Before installing make sure you update your distribution:
 
-    sudo apt get update
-    sudo apt get upgrade
-    sudo apt get dist-upgrade
+    sudo apt update
+    sudo apt upgrade
+    sudo apt dist-upgrade
 
+Install git:
 
+    sudo apt install git
+
+Install patch:
+
+    git clone https://github.com/SebiSebi/Vim-C-Cpp-Patch
+    cd Vim-C-Cpp-Patch
+    sudo ./run.sh
 
 Feature Summary
 -----
 
 The following plugins will be installed by default:
 
-1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-2. [Vundle](https://github.com/VundleVim/Vundle.vim)
+1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for code completion (works not only with C/C++);
+2. [Vundle](https://github.com/VundleVim/Vundle.vim) for plugin installation. This can be further used if you want
+to install other Vim plugins.
 
 There are two optional features that you can install:
 
