@@ -39,3 +39,10 @@ touch ~/.vim/.ycm_extra_conf.py
 cat src/ycm_extra_conf.py > ~/.vim/.ycm_extra_conf.py
 cat src/ycm_C.config >> ~/.vimrc
 
+# Add build and run support.
+echo "Do you want to add build and run support? [Y/n]"
+read opt1
+if [ "$opt1" != "n" ];
+then
+	cat src/build_and_run.config >> ~/.vimrc
+fi
