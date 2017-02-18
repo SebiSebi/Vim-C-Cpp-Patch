@@ -19,8 +19,8 @@ on any Debian-like Linux distribution like Ubuntu or Mint.
 Installation
 ------------
 
-**WARNING** This will override your current .vimrc configuration file in user home directory.
-Before installing make sure you update your distribution:
+**WARNING:** This will override your current .vimrc configuration file in the user home directory.
+Before installing make sure you update your Linux distro (Debian only):
 
     sudo apt update
     sudo apt upgrade
@@ -35,6 +35,8 @@ Install patch:
     git clone https://github.com/SebiSebi/Vim-C-Cpp-Patch
     cd Vim-C-Cpp-Patch
     sudo ./run.sh
+
+Enjoy it!
 
 Feature Summary
 -----
