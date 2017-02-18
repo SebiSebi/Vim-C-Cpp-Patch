@@ -32,7 +32,7 @@ Install patch:
     cd Vim-C-Cpp-Patch
     sudo ./run.sh
 
-Enjoy it!
+It can take up to 30 min to install, so be patient. Enjoy it!
 
 Feature Summary
 -----
