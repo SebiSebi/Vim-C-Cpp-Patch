@@ -1,9 +1,5 @@
 # Vim-C-Cpp-Patch
 
-WARNING: This will override your vimrc file from your user home directory.
-
-1) Update your distro.
-
 - [Intro](#intro)
 - [Installation](#installation)
 - [Feature Summary](#feature-summary)
@@ -58,13 +54,13 @@ Build and run usage
 
 The following shortcuts can be used if you choose to install this feature:
 
-1. **Ctrl-r** builds and run all the C/C++ source files in the current directory;
-2. **Ctrl-b** builds all the C/C++ source files in the current directory;
-3. **Ctrl-l** lists the current run outputs;
+1. **Ctrl-r** builds and run all the C++ source files in the current directory;
+2. **Ctrl-b** builds all the C++ source files in the current directory;
+3. **Ctrl-l** lists the latest run outputs;
 4. **Ctrl-d** runs ddd debuger (make sure it is installed on your station).
 
-By default, all sources are compiled with "g++ -std=c++11". You can easily change
-this options in the .vimrc file to accomodate your requirements.
+By default, all sources are compiled with "g++ -Wall -std=c++11". You can easily change
+this options in the .vimrc file to accommodate your requirements.
 
 
 
