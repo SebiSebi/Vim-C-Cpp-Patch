@@ -20,6 +20,7 @@ packages=(
 
 # Install the latest vim version.
 apt-get --assume-yes purge vim vim-nox vim-runtime
+rm -rf ~/.vim
 
 # In some Debian (Jessie and later - 2014) add-apt-repository
 # can be found in software-properties-common, therefore
