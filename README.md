@@ -30,7 +30,7 @@ Install patch:
 
     git clone https://github.com/SebiSebi/Vim-C-Cpp-Patch
     cd Vim-C-Cpp-Patch
-    sudo ./run.sh
+    sudo --preserve-env ./run.sh
 
 It can take up to 30 min to install, so be patient. Enjoy it!
 
