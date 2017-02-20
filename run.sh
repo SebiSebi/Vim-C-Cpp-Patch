@@ -6,6 +6,9 @@ vim_version="8.0"
 
 # Install the latest vim version.
 apt --assume-yes purge vim vim-nox vim-runtime gvim
+rm -rf ~/.vim
+rm -rf ~/.vimrc
+
 add-apt-repository ppa:jonathonf/vim -y
 apt update
 apt --assume-yes install vim vim-nox ctags vim-doc vim-scripts cscope vim-gtk-py2 vim-gtk3-py2 vim-athena-py2
