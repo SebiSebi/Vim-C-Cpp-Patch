@@ -20,8 +20,6 @@ packages=(
 
 # Install the latest vim version.
 apt-get --assume-yes purge vim vim-nox vim-runtime
-rm -rf ~/.vim
-rm -rf ~/.vimrc
 
 # In some Debian (Jessie and later - 2014) add-apt-repository
 # can be found in software-properties-common, therefore
@@ -51,6 +49,8 @@ then
 else 
 	echo "Vim version ok."
 fi
+
+rm -rf ~/.vimrc
 
 # Install You Complete Me with semantic support for C-family languages.
 apt-get --assume-yes install build-essential cmake
