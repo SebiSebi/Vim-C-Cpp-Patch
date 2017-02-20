@@ -4,6 +4,20 @@
 # Vim 8.0 should be enough.
 vim_version="8.0"
 
+# What packages to install apart from the basic ones.
+declare -a packages;
+
+numberOfPackages=7
+packages=(
+        "vim-doc"
+        "vim-scripts"
+        "cscope"
+        "vim-gtk-py2"
+        "vim-gtk3-py2"
+        "vim-athena-py2"
+        "exuberant-ctags"
+);
+
 # Install the latest vim version.
 apt-get --assume-yes purge vim vim-nox vim-runtime gvim
 rm -rf ~/.vim
@@ -11,7 +25,17 @@ rm -rf ~/.vimrc
 
 add-apt-repository ppa:jonathonf/vim -y
 apt-get update
-apt-get --assume-yes install vim vim-nox ctags vim-doc vim-scripts cscope vim-gtk-py2 vim-gtk3-py2 vim-athena-py2
+apt-get --assume-yes install vim vim-nox # These vim packages must be installed.
+
+# Install optional vim related packages.
+for ((i = 0; i < $numberOfPackages; i++))
+do
+        pkg=${packages[${i}]}
+        if [ $(apt-cache search --names-only "^${pkg}$" | wc -l) -ne 0 ];
+        then
+        	apt-get --assume-yes install ${pkg}
+        fi
+done
 
 # Check if the installed version is new enough.
 if [ $(vim --version | head -n 1 | grep $vim_version | wc -l) -ne 1 ];
