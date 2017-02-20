@@ -23,6 +23,11 @@ apt-get --assume-yes purge vim vim-nox vim-runtime gvim
 rm -rf ~/.vim
 rm -rf ~/.vimrc
 
+# In some Debian (Jessie and later - 2014) add-apt-repository
+# can be found in software-properties-common, therefore
+# install it first and then add the PPA.
+apt-get install software-properties-common
+
 add-apt-repository ppa:jonathonf/vim -y
 apt-get update
 apt-get --assume-yes install vim vim-nox # These vim packages must be installed.
