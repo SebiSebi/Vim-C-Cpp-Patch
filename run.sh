@@ -19,7 +19,7 @@ packages=(
 );
 
 # Install the latest vim version.
-apt-get --assume-yes purge vim vim-nox vim-runtime gvim
+apt-get --assume-yes purge vim vim-nox vim-runtime
 rm -rf ~/.vim
 rm -rf ~/.vimrc
 
