@@ -18,13 +18,13 @@ Installation
 **WARNING:** This will override your current .vimrc configuration file in the user home directory.
 Before installing make sure you update your Linux distro (Debian only):
 
-    sudo apt update
-    sudo apt upgrade
-    sudo apt dist-upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get dist-upgrade
 
 Install git:
 
-    sudo apt install git
+    sudo apt-get install git
 
 Install patch:
 
