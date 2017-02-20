@@ -38,7 +38,8 @@ do
 done
 
 # Check if the installed version is new enough.
-if [ $(vim --version | head -n 1 | grep $vim_version | wc -l) -ne 1 ];
+if [ $(vim --version | head -n 1 | grep $vim_version | wc -l) -ne 1 ||
+     $(vim --version | echo $?) -ne 0]; # Vim command does not exist.
 then
 	echo "Vim version is not good enough. Run vim --version to check if it is greater than ${vim_version}."
 	exit 1
