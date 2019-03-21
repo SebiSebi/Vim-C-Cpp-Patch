@@ -2,7 +2,7 @@
 
 # Some plugins require a minimum vim version. 
 # Vim 8.0 should be enough.
-vim_version="8.0"
+vim_version="8."
 
 # What packages to install apart from the basic ones.
 declare -a packages;
